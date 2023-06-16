@@ -9,12 +9,12 @@ import { Store } from '@ngrx/store';
 })
 export class AppComponent {
   title = 'angular-movie-app';
-
+user: any;
   constructor(
     private store: Store,
   ){
   this.store.select(authSelector).subscribe((auth)=>{
-    console.log('auth state', auth);
+    this.user = auth;
   });
   }
 }
