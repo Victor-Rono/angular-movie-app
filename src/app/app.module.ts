@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { Store, StoreModule } from '@ngrx/store';
+import { StoreModule } from '@ngrx/store';
 import { appReducer } from './STATE/app.state';
-import { authSelector } from './STATE/auth/auth.selectors';
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -13,19 +14,14 @@ import { authSelector } from './STATE/auth/auth.selectors';
   imports: [
     BrowserModule,
     StoreModule.forRoot(appReducer),
+    AppRoutingModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
 
-constructor(
-  private store: Store,
-){
-this.store.select(authSelector).subscribe((auth)=>{
-  console.log(auth);
-})
-}
 
 
  }
