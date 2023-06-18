@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
@@ -17,16 +18,22 @@ import { PageNotFoundComponent } from './modules/page-not-found/page-not-found.c
   imports: [
     BrowserModule,
     StoreModule.forRoot(appReducer),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, 
+      logOnly: !isDevMode(),
+      autoPause: true,
+      trace: false,
+      traceLimit: 75,
+    }),
     AppRoutingModule,
     RouterModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
-
-
 
  }
