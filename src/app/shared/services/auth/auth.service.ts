@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { LoginInterface } from '../../interfaces/auth/login.interface';
 import { NotificationService } from '../notification/notification.service';
 import { Store } from '@ngrx/store';
 import { setAuthAction } from 'src/app/STATE/auth/auth.actions';
 import { Router } from '@angular/router';
+import { LoginInterface } from '../../interfaces/login.interface';
 
 @Injectable({
   providedIn: 'root'

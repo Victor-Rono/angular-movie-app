@@ -5,16 +5,16 @@ import { AuthService } from '../../services/auth/auth.service';
 @Injectable({
   providedIn: 'root'
 })
-export class MoviesGuard implements CanActivate {
+export class LoginGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
 
   canActivate(): boolean {
     const userIsLoggedIn = this.authService.currentUserExists();
 
-  // if user isn't logged in, take them to login  page
-    if(!userIsLoggedIn){
-      this.router.navigate(['/login']);
+  // if user is  logged in, take them to the movies page
+    if(userIsLoggedIn){
+      this.router.navigate(['/movies']);
     }
-    return userIsLoggedIn;
+    return !userIsLoggedIn;
   }
 }

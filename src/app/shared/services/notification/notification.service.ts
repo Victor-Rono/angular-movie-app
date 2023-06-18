@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { NotificationInterface } from '../../interfaces/auth/notification.interface';
+import { NotificationInterface } from '../../interfaces/notification.interface';
 
 @Injectable({
   providedIn: 'root'

@@ -5,16 +5,16 @@ import { AuthService } from '../../services/auth/auth.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGGuard implements CanActivate {
+export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
 
   canActivate(): boolean {
     const userIsLoggedIn = this.authService.currentUserExists();
 
-  // if user is  logged in, take them to the movies page
-    if(userIsLoggedIn){
-      this.router.navigate(['/movies']);
+  // if user isn't logged in, take them to login  page
+    if(!userIsLoggedIn){
+      this.router.navigate(['/login']);
     }
-    return !userIsLoggedIn;
+    return userIsLoggedIn;
   }
 }

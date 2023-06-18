@@ -1,0 +1,23 @@
+<main>
+  <header>
+    <button routerLink="/movies">Back to Movies</button>
+  </header>
+
+  <body>
+    <h3>List of movies</h3>
+    <input type="search" placeholder="search movies" (input)="search($event.target)">
+
+<div class="movies">
+<div class="movie" *ngFor="let movie of movies">
+<div class="image">
+  <img *ngIf="movie.Poster" height="250px" [src]="movie.Poster" alt="image not found">
+</div>
+<h3>{{movie.Title}}</h3> <br>
+<small>{{movie.Type}}</small> <br>
+<small>Year: {{movie.Year}}</small>
+
+</div>
+</div>
+
+  </body>
+</main>

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MoviesGuard } from './shared/guards/movies/movies.guard';
-import { AuthGGuard } from './shared/guards/auth/auth.guard';
 import { PageNotFoundComponent } from './modules/page-not-found/page-not-found.component';
+import { AuthGuard } from './shared/guards/auth/auth.guard';
+import { LoginGuard } from './shared/guards/login/login.guard';
 
 const routes: Routes = [
   {
@@ -14,14 +14,21 @@ const routes: Routes = [
   // MOVIES
   {
     path:'movies',
-    canActivate: [MoviesGuard],
+    canActivate: [AuthGuard],
     loadChildren: () => import('./modules/movies/movies.module').then((m) => m.MoviesModule),
+  },
+
+  // SEARCH
+  {
+    path:'search',
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./modules/search/search.module').then((m) => m.SearchModule),
   },
 
   // LOGIN
   {
     path:'login',
-    canActivate: [AuthGGuard],
+    canActivate: [LoginGuard],
     loadChildren: () => import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
 
