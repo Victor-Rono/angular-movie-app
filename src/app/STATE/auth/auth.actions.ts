@@ -1,6 +1,6 @@
 import { createAction, props } from "@ngrx/store";
-import { AuthInterface } from "src/app/shared/interfaces/auth/auth.interface";
-import { LoginInterface } from "src/app/shared/interfaces/auth/login.interface";
+import { AuthInterface } from "src/app/shared/interfaces/auth.interface";
+import { LoginInterface } from "src/app/shared/interfaces/login.interface";
 
 
 export const setAuthAction = createAction(

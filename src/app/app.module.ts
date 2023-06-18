@@ -2,6 +2,7 @@ import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { appReducer } from './STATE/app.state';
@@ -30,6 +31,7 @@ import { PageNotFoundComponent } from './modules/page-not-found/page-not-found.c
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
