@@ -1,0 +1,142 @@
+*{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	background: #d0d0d0;
+}
+/* Hamburger menu toggle */
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  background-color: #053941;
+}
+
+.hamburger-container input[type="checkbox"]:checked ~ .sidebar {
+  transform: translateX(0);
+}
+
+.nav .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav{
+  background: #b6d3d7;
+	position: fixed;
+  top: 0px;
+	width: 100%;
+}
+
+.nav .sidebar {
+	background: #053941;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 235px;
+	height: 100%;
+	padding: 20px 0px;
+	transition: all 0.5s ease;
+}
+
+.top_navbar{
+  background: #ffffff;
+	position: fixed;
+	width:100%;
+  margin: 0px;
+  box-shadow: .5px .1px 4px 1px #053941;
+}
+
+
+.nav .sidebar .logo img{
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin:0 auto;
+}
+
+.nav .sidebar .logo h3{
+	color: #ffffff;
+	margin: 10px 0 5px;
+}
+
+.nav .sidebar ul li a{
+	display: block;
+	padding: 13px 30px;
+	border-bottom: 1px solid #10558d;
+	color: rgb(241, 237, 237);
+	font-size: 16px;
+	position: relative;
+}
+
+.nav .sidebar ul li a .icon{
+	color: #dee4ec;
+	width: 30px;
+	display: inline-block;
+}
+
+ 
+
+.nav .sidebar ul li a:hover,
+.nav .sidebar ul li a.active{
+	color: #0c7db1;
+
+	background:white;
+    border-right: 2px solid rgb(5, 68, 104);
+}
+
+.nav .sidebar ul li a:hover .icon,
+.nav .sidebar ul li a.active .icon{
+	color: #0c7db1;
+}
+
+/* .nav .sidebar ul li a:hover:before,
+.nav .sidebar ul li a.active:before{
+	display: block;
+} */
+
+.nav .section{
+	width: calc(100% - 225px);
+	margin-left: 225px;
+	transition: all 0.5s ease;
+}
+
+.nav .section .top_navbar{
+	height: 50px;
+	display: flex;
+	align-items: center;
+	/* padding: 0 30px; */
+}
+
+.nav .section .top_navbar .hamburger a{
+	font-size: 28px;
+	color: #f4fbff;
+}
+
+.nav .section .top_navbar .hamburger a:hover{
+	color: #a2ecff;
+}
+
+body.active .nav .sidebar{
+	left: -225px;
+}
+
+body.active .nav .section{
+	margin-left: 0;
+	width: 100%;
+}
