@@ -35,17 +35,12 @@ export class AuthService {
 
   }
 
-
   saveUser(user: {email: string}){
     // save user to state
     this.store.dispatch(setAuthAction({auth: user}));
-
     // save user to local storage
     localStorage.setItem('user',user.email);
   }
-
-
-
 
   currentUserExists(): boolean{
     // get user from local storage and save to state

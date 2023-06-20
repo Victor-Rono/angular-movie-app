@@ -18,7 +18,6 @@ export class MoviesService {
 
 searchTerm = new BehaviorSubject<string | null>(null);
 
-
   getUpcomingMovies(): void {
     const url = 'https://moviesdatabase.p.rapidapi.com/titles/x/upcoming';
     const headers = {

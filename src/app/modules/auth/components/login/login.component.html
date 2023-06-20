@@ -1,7 +1,7 @@
 <div  class="login-container">
-  <form class="login-form" (ngSubmit)="submit()">
+  <form [formGroup]="loginForm"  class="login-form" (ngSubmit)="submit()">
       <label> Email</label>
-      <input [formGroup]="loginForm" formControlName="email" type="email" class="input">
+      <input formControlName="email" type="email" class="input">
       <small *ngIf="!loginForm.valid && loginForm.value.email" style="color:red">enter a valid email
       </small>
       <label> Password</label>

@@ -6,19 +6,17 @@
   <body>
     <h3>List of movies</h3>
 
-    <input type="search" placeholder="search movies" (input)="search($event.target)">
-
-<div class="movies">
-<div class="movie" *ngFor="let movie of filteredMovies">
-<div class="image">
-  <img *ngIf="movie.primaryImage?.url" height="250px" [src]="movie.primaryImage.url" alt="image not found">
-</div>
-<h3>{{movie.titleText.text}}</h3> <br>
-<small>{{movie.titleType.text}}</small> <br>
-<small>Release Date: {{getMovieDate(movie)}}</small>
-
-</div>
-</div>
-
+    <div class="movies">
+      <div class="movie" *ngFor="let movie of filteredMovies">
+        <img src="download.jpg" *ngIf="movie.primaryImage?.url" height="250px" [src]="movie.primaryImage.url"
+          alt="image not found" onerror="this.src='download.jpg';" />
+        <div class="tittletext">
+          <!-- <h1>{{movie.titleText.text}}</h1> -->
+          <h1>movie.\titleText</h1>
+          <p>{{movie.titleType.text}}</p>
+          <p>Release Date: {{getMovieDate(movie)}}</p>
+        </div>
+      </div>
+    </div>
   </body>
 </main>
