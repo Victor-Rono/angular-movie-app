@@ -11,12 +11,11 @@ import { RouterModule } from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './modules/page-not-found/page-not-found.component';
-import { MovieSuggestionsComponent } from './modules/movie-suggestions/movie-suggestions.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    MovieSuggestionsComponent
   ],
   imports: [
     BrowserModule,
