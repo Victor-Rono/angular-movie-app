@@ -48,7 +48,7 @@ outline: none;
   cursor: pointer;
   padding: 12px 30px;
   width:40%;
-  margin-top:40px;
+  margin:40px 0 0 10px;
   background-color: #053941;
   color: white;
   font-weight: bold;
@@ -87,7 +87,7 @@ button:disabled{
     display:none;
   }
   .login-container{
-    width: 400px;
+    width: 80%;
   }
   .login-form{
     display: flex;
@@ -95,5 +95,4 @@ button:disabled{
     width: 100%;
     align-items:center;
   }
-
 }
