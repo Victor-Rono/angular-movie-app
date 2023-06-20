@@ -5,6 +5,7 @@
 
   <body>
     <h3>List of movies</h3>
+    <input type="search" placeholder="search movies" (input)="search($event.target)" />
 
     <div class="movies">
       <div class="movie" *ngFor="let movie of filteredMovies">
