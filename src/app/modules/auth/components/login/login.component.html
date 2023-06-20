@@ -1,23 +1,14 @@
-<main>
-  <form [formGroup]="loginForm" (ngSubmit)="submit()">
-    
-    <div class="form-control">
+<div  class="login-container">
+  <form class="login-form" (ngSubmit)="submit()">
       <label> Email</label>
-      <input formControlName="email" type="email">
-     <div>
-      <small *ngIf="!loginForm.valid && loginForm.value.email" style="color:red">enter a valid email</small>
-     </div>
-
-    </div>
-
-
-    <div class="form-control">
+      <input [formGroup]="loginForm" formControlName="email" type="email" class="input">
+      <small *ngIf="!loginForm.valid && loginForm.value.email" style="color:red">enter a valid email
+      </small>
       <label> Password</label>
-      <input formControlName="password" type="password">
-    </div>
-
-    <div class="form-control">
-      <button [disabled]="!loginForm.valid || !loginForm.value.password">Submit</button>
-    </div>
+      <input formControlName="password" type="password" class="input">
+      <button id="submit" [disabled]="!loginForm.valid || !loginForm.value.password">Submit</button>
   </form>
-</main>
+  <div class="login-poster">
+    <img src="../../../../../assets/login_poster.jpg" alt="">
+  </div>
+</div >
