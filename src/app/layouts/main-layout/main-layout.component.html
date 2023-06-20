@@ -1,42 +1,35 @@
 <!-- SIDENAV and NAVBAR  -->
-<nav>
-  <div class="nav">
-      <div class="section">
-          <div class="top_navbar">
-            <div class="hamburger-container">
-              <input class="checkbox" type="checkbox" name="" id="" />
-                <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+
+  <div class="nav-container">
+                <div>
+                    <input class="checkbox" type="checkbox" id="toggle"/>
+                    <label for="toggle">&#9776;</label>
+                    <nav>
+                        <div class="logo">
+                            <img src="../../../assets/brij_logo.svg">
+                        </div>
+                        <ul>
+                            <li>
+                                <a routerLink="/movies" >
+                                    <span class="item">Upcoming Movies</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a routerLink="/search">
+                                    <span class="item">Search Movies</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a routerLink="/movie-suggestions">
+                                    <span class="item">Your Recommendation</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-              </div>
-          </div>
-      </div>
-      <div class="sidebar">
-          <div class="logo">
-              <img src="../../../assets/brij_logo.svg">
-          </div>
-          <ul>
-              <li>
-                  <a routerLink="/movies" >
-                      <span class="item">Upcoming Movies</span>
-                  </a>
-              </li>
-              <li>
-                  <a routerLink="/search">
-                      <span class="item">Search Movies</span>
-                  </a>
-              </li>
-              <li>
-                  <a routerLink="/movie-suggestions">
-                      <span class="item">Your Recommendation</span>
-                  </a>
-              </li>
-          </ul>
-      </div>
-  </div>
-</nav>
+        </div>
+
+
 
 <!-- <router-outlet></router-outlet> -->
 
