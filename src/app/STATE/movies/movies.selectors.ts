@@ -6,3 +6,4 @@ import { MovieStateInterface } from "./movies.state";
 const getMoviesState = createFeatureSelector<MovieStateInterface>('movies');
 
 export const selectAllMovies = createSelector(getMoviesState, (state) => state.movies );
+export const selectAllSuggestedMovies = createSelector(getMoviesState, (state) => state.suggestedMovies );

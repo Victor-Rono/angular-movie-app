@@ -24,3 +24,10 @@ export interface SearchedMovieInterface {
   Type: string,
   Year: string,
 }
+
+export interface SuggestedMoviesInterface {
+  movieCategory: string,
+  movieType:string,
+  reason: string,
+  imageURL: string,
+}

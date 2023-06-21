@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
-import { setMoviesAction } from "./movies.actions";
+import { setMoviesAction, setSuggestedMoviesAction } from "./movies.actions";
 import { initialMovieState } from "./movies.state";
 
 export const moviesReducer = createReducer(
@@ -8,4 +8,8 @@ export const moviesReducer = createReducer(
       ...state,
       movies: action.movies,
   })),
+  on(setSuggestedMoviesAction, (state, action) => ({
+    ...state,
+    suggestedMovies: action.movies,
+})),
 );
