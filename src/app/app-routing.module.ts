@@ -5,6 +5,7 @@ import { AuthGuard } from './shared/guards/auth/auth.guard';
 import { LoginGuard } from './shared/guards/login/login.guard';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+import { MovieSuggestionsComponent } from './modules/movie-suggestions/components/movie-suggestions/movie-suggestions.component';
 
 const routes: Routes = [
 
@@ -15,13 +16,13 @@ const routes: Routes = [
   children:[
     {
       path:'',
-      redirectTo:'/movies',
+      redirectTo:'/upcoming-movies',
       pathMatch: 'full',
     },
 
     // MOVIES
     {
-      path:'movies',
+      path:'upcoming-movies',
       loadChildren: () => import('./modules/movies/movies.module').then((m) => m.MoviesModule),
     },
 
@@ -31,6 +32,12 @@ const routes: Routes = [
       canActivate: [AuthGuard],
       loadChildren: () => import('./modules/search/search.module').then((m) => m.SearchModule),
     },
+
+    // MOVIE SUGGESTIONS
+    {
+    path: 'movie-suggestions',
+    loadChildren: () => import('./modules/movie-suggestions/moviesSuggestions.module').then((m) => m.MoviesSuggestionsModule),
+    }
   ]
 },
 
@@ -46,15 +53,10 @@ children:[
   },
 ]
 },
-
-
-
-
   {
   path: '**',
    component: PageNotFoundComponent,
-  }
-
+  },
 
 ];
 

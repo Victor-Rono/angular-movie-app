@@ -1,0 +1,66 @@
+.suggestions-container{
+  height: 65%px;
+  margin: 10px;
+  width: 70%;
+  border-radius: 2px;
+  box-shadow:3px 3px 5px #053941;
+} 
+.suggestions-form{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 5px;
+  align-items: right;
+}
+
+ label{
+  font-size: 10px;
+  margin:40px 10px 0px 10px;
+  font-weight:bold;
+}
+
+.movie-type .reason{
+padding:12px;
+width: 80%;
+margin: 15px;
+border:1px solid rgb(0, 0, 0);
+border-radius: 5px;
+outline: none;
+}
+
+.movie-type .reason textarea{
+  padding:12px;
+  width: 80%;
+  margin: 15px;
+  border:1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  outline: none;
+  }
+  
+  button{
+    cursor: pointer;
+    padding: 12px 30px;
+    width:80%;
+    margin:40px 0 0 10px;
+    background-color: #053941;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover{
+    color: #053941;
+    background-color:white;
+    border:1px solid #053941;
+  }

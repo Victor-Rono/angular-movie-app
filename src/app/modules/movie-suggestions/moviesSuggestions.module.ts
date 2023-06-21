@@ -14,4 +14,4 @@ import { MovieSuggestionsComponent } from './components/movie-suggestions/movie-
     MovieSuggestionsRoutingModule
   ]
 })
-export class MoviesModule { }
+export class MoviesSuggestionsModule { }

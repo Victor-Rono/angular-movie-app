@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { MoviesComponent } from 'src/app/modules/movies/components/movies/movies.component';
 
 @Component({
   selector: 'app-main-layout',

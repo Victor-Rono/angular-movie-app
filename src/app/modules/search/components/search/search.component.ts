@@ -23,10 +23,8 @@ this.moviesService.searchTerm.pipe(take(1)).subscribe({
     // search for the movie
     this.searchMovies(this.searchTerm);
   }
-
   },
 });
-
 }
 
 searchMovies(searchTerm: string){
@@ -41,10 +39,8 @@ error:(err)=>{
 });
 }
 
-
 search(event:any){
   const searchTerm = event.value;
 this.searchMovies(searchTerm)
 }
-
 }

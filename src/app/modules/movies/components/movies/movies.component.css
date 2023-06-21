@@ -4,55 +4,70 @@
   font-family: sans-serif;
   /* box-sizing: border-box; */
 }
-
-body {
+ body{
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background: whitesmoke
-}
+} 
+
+/* .movies-container {
+  display: flex;
+} */
 
 .movies {
   display: flex;
+  flex-wrap: wrap;
+  /* flex-wrap:wrap; */
+  /* display: block; */
+  /* display: grid;
+  grid-template-columns: 135px 135px 135px 135px;
+  gap: 10px; */
 }
 
 .movie {
-  height: 500px;
-  margin: 50px;
-  box-shadow: 5px 5px 20px black;
+  height: 200px;
+  margin: 10px;
+  margin-bottom:70px;
+  /* background-image: url(../../../../../assets/login_poster.jpg); */
+  box-shadow: 3px 3px 5px rgb(164, 164, 164);
   overflow: hidden;
+  border-radius: 3px;
 }
 
 img {
-  height: 500px;
-  width: 350px;
+  height: 200px;
+  width: 135px;
   border-radius: 3px;
 }
 
 .tittletext {
-  height: 70px;
-  width: 350px;
+  height: fit-content;
+  block-size: fit-content;
+  height: 50px;
+  width: 135px;
   padding: 6px;
   box-sizing: border-box;
   position: absolute;
-  bottom: 33px;
+  /* bottom:104px;*/
   background: rgb(132, 160, 164, 0.3);
   color: white;
+  border-radius: 0 0 3px 3px;
 }
 
 h1 {
-  margin: 10px;
-  font-size: 20px;
+  margin:10px;
+  font-size: 10px;
+  color: black;
 }
 
 p {
   /* margin: 20px; */
-  font-size: 20px;
+  font-size: 8px;
   visibility: hidden;
   opacity: 0;
 }
-
 span {
   font-weight: bolder;
 }
@@ -62,15 +77,21 @@ span {
 }
 
 .movie:hover .tittletext {
-  height: 220px;
-  bottom: S0px;
+  height: 70px;
+  /* margin-bottom: 10px; */
+  /* bottom: 104px; */
   background: black;
-  transition: .5s ease-in;
+  transition: .5s ease-out;
 }
 
 .movie:hover p {
   opacity: 1;
   visibility: visible;
+  color: white;
+}
+
+.movie:hover h1 {
+  color: white;
 }
 
 .movie:hover img {

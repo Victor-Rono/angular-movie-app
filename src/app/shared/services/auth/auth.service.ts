@@ -31,7 +31,7 @@ export class AuthService {
     // notify user they're logged in
     this.notificationService.showSuccess({message:'Login Successful'});
     // redirect user to movies page
-    this.router.navigate(['/movies']);
+    this.router.navigate(['/upcoming-movies']);
 
   }
 

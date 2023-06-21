@@ -37,8 +37,8 @@ this.moviesService.getUpcomingMovies();
 this.store.select(selectAllMovies).subscribe((movies)=>{
 
   this.movies = movies;
-  this.filteredMovies = movies;
 
+  this.filteredMovies = movies;
 });
 }
 
@@ -58,11 +58,7 @@ if(!searchTerm){
 
 this.filteredMovies = moviesCopy.filter((movie)=> movie.titleText.text.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()));
 
-
 }, 1000);
-
-
-
 
 }
 
@@ -71,6 +67,5 @@ const date = movie.releaseDate;
 const releaseDate = `${date.month}-${date.day}-${date.year}`;
 return releaseDate;
 }
-
 
 }

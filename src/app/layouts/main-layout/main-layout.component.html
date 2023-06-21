@@ -1,37 +1,44 @@
 <!-- SIDENAV and NAVBAR  -->
+<div class="nav-container">
+    <div>
+        <input class="checkbox" type="checkbox" id="toggle" />
+        <label for="toggle">&#9776;</label>
+        <nav>
+            <div class="logo">
+                <img src="../../../assets/brij_logo.svg">
+            </div>
+            <ul>
+                <li>
+                    <a routerLink="/upcoming-movies">
+                        <span class="item">Upcoming Movies</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/search">
+                        <span class="item">Search Movies</span>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/movie-suggestions">
+                        <span class="item">Your Recommendation</span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <header>
+                        <button>Log Out</button>
+                    </header>
+                </li> -->
+                <li>
+                    <a routerLink="/movie-suggestions">
+                        <span class="item">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
 
-  <div class="nav-container">
-                <div>
-                    <input class="checkbox" type="checkbox" id="toggle"/>
-                    <label for="toggle">&#9776;</label>
-                    <nav>
-                        <div class="logo">
-                            <img src="../../../assets/brij_logo.svg">
-                        </div>
-                        <ul>
-                            <li>
-                                <a routerLink="/movies" >
-                                    <span class="item">Upcoming Movies</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a routerLink="/search">
-                                    <span class="item">Search Movies</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a routerLink="/movie-suggestions">
-                                    <span class="item">Your Recommendation</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-        </div>
-
-
-
-<!-- <router-outlet></router-outlet> -->
-
-
-
+<!-- RENDER MAIN LAYOUTS -->
+<div class="main-layout">
+    <router-outlet></router-outlet>
+</div>
