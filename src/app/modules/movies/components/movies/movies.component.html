@@ -1,4 +1,7 @@
 <main>
+  <header>
+    <button (click)="logout()">Log Out</button>
+  </header>
   <h3>List of movies</h3>
   <input type="search" placeholder="search movies" (input)="search($event.target)" />
   <div class="movies-container">
