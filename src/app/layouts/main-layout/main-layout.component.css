@@ -17,6 +17,7 @@ body{
 
 .nav-container{
 	top: 0;
+	
 	width: 100%;
 	position:fixed;
 	left: 0;
@@ -82,9 +83,9 @@ body{
 	color: #0c7db1;
 }
 
-.nav-container input[type="checkbox"]:checked ~ nav {
+/* .nav-container input[type="checkbox"]:checked ~ nav {
   width:0px;
-}
+} */
 
 input[type="checkbox"]{
 	display:none;
@@ -98,6 +99,18 @@ input[type="checkbox"]{
 	color: #ffffff;
 	margin: 10px;
 	padding: 13px 30px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+	.nav-container input[type="checkbox"]:checked ~ nav {
+		width:0px;
+	}
+	.main-layout{
+		margin-top: 60px;
+		margin-left: 0px;
+	}
 }
 
 
