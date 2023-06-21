@@ -45,6 +45,10 @@ outline: none;
   border-radius: 5px;
   outline: none;
   }
+
+  #part2{
+    margin-bottom: 20px;
+  }
   
   button{
     cursor: pointer;

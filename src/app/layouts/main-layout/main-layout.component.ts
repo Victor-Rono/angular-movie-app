@@ -12,4 +12,10 @@ import { MoviesComponent } from 'src/app/modules/movies/components/movies/movies
 })
 export class MainLayoutComponent {
 
+  isRevealed: boolean = false;
+
+  revealUserInfo() {
+    this.isRevealed = !this.isRevealed;
+  }
+
 }

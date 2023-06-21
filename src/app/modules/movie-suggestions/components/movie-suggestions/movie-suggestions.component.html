@@ -1,10 +1,19 @@
 <div class="suggestions-container">
   <div class="suggestions-form">
     <form class="form">
-      <label for="type">Type</label>
+      <div> <input type="radio" id="new-movie" name="new-movie" value="new-movie">
+        <label for="new-movie">New Movie</label><br>
+
+        <input type="radio" id="part2" name="part2" value="part2">
+        <label for="css">Recommend Part 2</label><br>
+      </div>
+
+
       <input class="movie-type" placeholder="Type of Movie" type="text">
       <label placeholder="Type of Movie" for="type">Reason</label>
+
       <textarea class="reason" for="reason">Reason</textarea>
+
       <button class="upload">upload image</button>
       <button class="submit">Submit Suggestion </button>
     </form>
